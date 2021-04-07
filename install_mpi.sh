@@ -6,7 +6,7 @@ wget -qO https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCT
 # add to your apt sources keyring so that archives signed with this key will be trusted.
 # remove the public key
 
-apt install -y software-properties-common
+apt install -y gnupg software-properties-common
 
 # Configure the APT client to use Intel's repository
 echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
