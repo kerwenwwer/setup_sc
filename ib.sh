@@ -20,5 +20,12 @@ fi
 
 systemctl restart networking
 
+if [ $HOSTNAME = "apollo17" ]
+then
+    ip addr add 10.66.66.17/24 dev enp4s0f0
+else 
+    ip addr add 10.66.66.18/24 dev enp4s0f0
+fi
+
 echo connected > /sys/class/net/ibp3s0/mode
 ip link set dev ibp3s0 mtu 65520
