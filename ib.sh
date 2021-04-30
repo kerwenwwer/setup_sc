@@ -27,5 +27,5 @@ else
     ip addr add 10.66.66.18/24 dev enp4s0f0
 fi
 
-echo connected > /sys/class/net/ibp3s0/mode
-ip link set dev ibp3s0 mtu 65520
+#echo connected > /sys/class/net/ibp3s0/mode
+#ip link set dev ibp3s0 mtu 65520
