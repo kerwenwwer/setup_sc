@@ -22,3 +22,4 @@ tar xvzf hpcg-3.1.tar.gz && cd hpcg-3.1
 cp setup/Make.Linux_MPI . 
 mkdir build &&& cd build
 ../configure Linux_MPI && make -j 12
+cd ../ && cp -a build /heom/master/hpcg
