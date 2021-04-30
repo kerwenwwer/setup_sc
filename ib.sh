@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # import some modules 
-modprobe rdmavt rdma_ucm rdma_rxe rdma_cm ib_uverbs ib_iser ib_ipoib ib_cm ib_umad ib_core mlx4_en mlx4_ib mlx4_core      
+modprobe rdmavt rdma_ucm rdma_rxe rdma_cm ib_uverbs ib_iser ib_ipoib ib_cm ib_umad ib_core mlx4_en mlx4_ib mlx4_core       
 
 # Install all package
-apt install -y libmlx4-1 infiniband-diags ibutils ibverbs-utils rdmacm-utils perftest open-iscsi rdma-core tgt cmake pkg-config
+apt install -y libmlx4-1 infiniband-diags ibutils ibverbs-utils rdmacm-utils perftest open-iscsi rdma-core tgt cmake pkg-config mstflint libibverbs-dev
 
 IBDEV=$(find /sys/class/net ! -type d | xargs --max-args=1 realpath  | awk -F\/ '/pci/{print $NF}' | grep ib)
 
